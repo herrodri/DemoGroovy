@@ -60,8 +60,6 @@ dependencies {
     runtime "javax.xml.bind:jaxb-api:2.3.1"
     testCompile "io.micronaut:micronaut-inject-groovy"
     testCompile "org.grails:grails-gorm-testing-support"
-    testCompile "org.mockito:mockito-core"
-    testCompile "io.micronaut:micronaut-http-client"
     testCompile "org.grails:grails-web-testing-support"
     testCompile "org.grails:views-json-testing-support"
     testCompile "org.hibernate.validator:hibernate-validator:6.0.20.Final"

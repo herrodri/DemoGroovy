@@ -1,9 +1,9 @@
-package com.grails.demogroovy
+package com.grails.demogroovy.dto
 
-import grails.testing.services.ServiceUnitTest
+import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class PersonServiceSpec extends Specification implements ServiceUnitTest<PersonService>{
+class PersonSpec extends Specification implements DomainUnitTest<Person> {
 
     def setup() {
     }
