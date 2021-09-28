@@ -1,4 +1,4 @@
-package demogroovy
+package com.grails.demogroovy
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

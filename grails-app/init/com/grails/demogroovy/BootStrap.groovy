@@ -1,4 +1,4 @@
-package demogroovy
+package com.grails.demogroovy
 
 class BootStrap {
 

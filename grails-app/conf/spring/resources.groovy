@@ -1,10 +1,10 @@
-import com.grails.demogroovy.dto.PersonService
 import com.grails.demogroovy.mapper.PersonMapper
+import com.grails.demogroovy.service.CrudPersonService
 
 // Place your Spring DSL code here
 beans = {
 
-    personService(PersonService) {bean ->
+    crudPersonService(CrudPersonService){ bean ->
         bean.autowire = "byName"
     }
 

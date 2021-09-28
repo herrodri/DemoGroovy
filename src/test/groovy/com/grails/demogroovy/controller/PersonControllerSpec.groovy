@@ -1,7 +1,9 @@
-package com.grails.demogroovy.dto
+package com.grails.demogroovy.controller
 
+import person.PersonController
+import com.grails.demogroovy.dto.PersonDto
+import com.grails.demogroovy.service.CrudPersonService
 import grails.testing.web.controllers.ControllerUnitTest
-import groovy.json.JsonSlurper
 import org.springframework.http.HttpStatus
 import spock.lang.Specification
 
@@ -13,7 +15,7 @@ class PersonControllerSpec extends Specification implements ControllerUnitTest<P
     def cleanup() {
     }
 
-    void "save person with correct information "() {
+    void "given person with correct information should return 200 code"() {
 
         given:
         PersonDto person = new PersonDto()
@@ -22,8 +24,8 @@ class PersonControllerSpec extends Specification implements ControllerUnitTest<P
         person.setLastName("Giraldo")
         person.setAge(26)
 
-        controller.personService = Stub(PersonService) {
-            save(_) >> person
+        controller.crudPersonService = Stub(CrudPersonService) {
+            savePerson(_) >> person
         }
         when:
             controller.save(person)

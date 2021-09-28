@@ -1,4 +1,4 @@
-package com.grails.demogroovy.dto
+package person
 
 class Person {
     String documentNumber

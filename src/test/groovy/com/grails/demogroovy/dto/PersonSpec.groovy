@@ -1,6 +1,7 @@
 package com.grails.demogroovy.dto
 
 import grails.testing.gorm.DomainUnitTest
+import person.Person
 import spock.lang.Specification
 
 class PersonSpec extends Specification implements DomainUnitTest<Person> {
@@ -11,8 +12,12 @@ class PersonSpec extends Specification implements DomainUnitTest<Person> {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "test documentNumber cannot length min 8 characters"() {
+        when:
+            domain.documentNumber = "1234567"
+
+        then:
+            !domain.validate(['documentNumber'])
+            domain.errors['documentNumber'].code == 'nullable'
     }
 }

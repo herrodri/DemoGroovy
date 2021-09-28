@@ -1,4 +1,4 @@
-package demogroovy
+package com.grails.demogroovy
 
 import grails.core.GrailsApplication
 import grails.plugins.*

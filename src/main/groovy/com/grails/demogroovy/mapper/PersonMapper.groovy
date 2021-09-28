@@ -1,9 +1,9 @@
 package com.grails.demogroovy.mapper
 
-import com.grails.demogroovy.dto.Person
+import person.Person
 import com.grails.demogroovy.dto.PersonDto
 
- class PersonMapper {
+class PersonMapper {
 
     static Person fromDtoToEntity (PersonDto personDto){
         return new Person(
